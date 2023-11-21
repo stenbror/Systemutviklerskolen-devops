@@ -5,7 +5,7 @@ name: .NET
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "features/*" ]
   pull_request:
     branches: [ "master" ]
 
@@ -44,7 +44,7 @@ jobs:
       working-directory: systemutviklerskolen-todo-app-frontend
 
     - name: dotnet publish
-      run: dotnet publish -C Release -o ${{env.DOTNET_ROOT}}/myapp
+      run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
       working-directory: systemutviklerskolen-todo-app-backend
 
       
