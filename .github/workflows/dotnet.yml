@@ -42,3 +42,10 @@ jobs:
     - name: NPM build
       run: npm run build
       working-directory: systemutviklerskolen-todo-app-frontend
+
+    - name: dotnet publish
+      run: dotnet publish -C Release -o ${{env.DOTNET_ROOT]]/myapp
+      working-directory: systemutviklerskolen-todo-app-backend
+
+      
+      
